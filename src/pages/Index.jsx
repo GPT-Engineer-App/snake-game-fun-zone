@@ -77,6 +77,13 @@ const Index = () => {
           setFood(getRandomPosition());
           setLevel((prevLevel) => prevLevel + 1);
           setBgColor(`hsl(${Math.random() * 360}, 70%, 80%)`);
+          toast({
+            title: "Nice!",
+            description: "You ate a piece!",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+          });
         } else {
           newSnake.shift();
         }
